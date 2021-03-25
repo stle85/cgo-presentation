@@ -8,7 +8,7 @@ typedef struct {
 } S;
 
 typedef struct {
-	S *x, y;
+	S *x;
 } C;
 
 void process(C *c) {
@@ -22,7 +22,6 @@ import "C"
 // Build and run current example with different GODEBUG=cgo-check=<N> env variables.
 //go:generate make run
 //go:generate make run -e GODEBUG=cgocheck=0
-//go:generate make run -e GODEBUG=cgocheck=2
 func main() {
 	s := &C.S{a: 1, b: 2, c: 3}
 	c := &C.C{x: s}

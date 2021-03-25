@@ -11,7 +11,7 @@ void set(struct S *n) {
 	s = n;
 }
 
-int get() {
+int getA() {
 	return s->a;
 }
 */
@@ -34,5 +34,5 @@ func set() {
 }
 
 func print() {
-	fmt.Printf("s.a = %d\n", int(C.get()))
+	fmt.Printf("s.a = %d\n", int(C.getA()))
 }
