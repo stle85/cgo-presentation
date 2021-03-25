@@ -2,8 +2,6 @@ package main
 
 /*
 #include <stdint.h> // for uint8_t type
-#include <stdlib.h> // for calloc and free funcs
-#include <string.h> // for memmove func
 #include <stdio.h>
 
 typedef struct {

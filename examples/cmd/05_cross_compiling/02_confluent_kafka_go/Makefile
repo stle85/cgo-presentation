@@ -6,10 +6,10 @@ RD_KAFKA_BUILD_TAG ?= static
 default: run
 
 
-all: clean build
+all: build
 
 
-build:
+build: clean
 	mkdir -p $(BUILD_DIR)/bin
 	mkdir -p $(BUILD_DIR)/lib
 

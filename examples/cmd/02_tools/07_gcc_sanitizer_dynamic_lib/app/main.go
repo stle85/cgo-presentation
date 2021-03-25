@@ -5,8 +5,8 @@ package main
 import "C"
 
 /*
-#cgo CFLAGS: -I3rdparty/target/build/include
-#cgo LDFLAGS: -L3rdparty/target/build/lib -lfoo
+#cgo CFLAGS: -I${SRCDIR}/../lib/target/build/include
+#cgo LDFLAGS: -L${SRCDIR}/../lib/target/build/lib -lfoo
 #include <foo.h>
 */
 import "C"

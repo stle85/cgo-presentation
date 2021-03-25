@@ -1,5 +1,9 @@
 package main
 
+/*
+#include <stdlib.h> // for calloc and free funcs
+#include <string.h> // for memmove func
+*/
 import "C"
 import "unsafe"
 

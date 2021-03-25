@@ -19,6 +19,7 @@ build:
 	$(RM) libsum.o
 
 
+build-mingw: TARGET=libsum_mingw_x32.a
 build-mingw: CC=/usr/bin/x86_64-w64-mingw32-gcc-win32
 build-mingw: AR=/usr/bin/x86_64-w64-mingw32-ar
 build-mingw: build
