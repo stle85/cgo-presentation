@@ -1,0 +1,31 @@
+/* @theme theme */
+@import 'default';
+
+h1 { font-size: 2.4rem; }
+h2 { font-size: 2.2rem; }
+h3 { font-size: 2.0rem; }
+h4 { font-size: 1.8rem; }
+h5 { font-size: 1.6rem; }
+h6 { font-size: 1.4rem; }
+
+h1, h2, h3, h4, h5, h6 {
+    color: hsl(0, 0%, 100%);
+    text-shadow: 1px 1px 2px black;
+}
+
+section {
+    font-size: 1.2rem;
+    color: rgb(255, 255, 255);
+}
+
+section strong {
+    text-shadow: 1px 1px 2px black;
+}
+
+section pre {
+    color: rgb(54, 50, 50);
+}
+
+section table {
+    color: rgb(54, 50, 50);
+}

@@ -1,0 +1,11 @@
+# IDEs
+.idea/
+.vscode/
+
+# Builded binaries
+app.exe
+app.out
+
+# Builded libraries
+lib*.a
+lib*.so
