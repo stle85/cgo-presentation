@@ -234,6 +234,11 @@ C массив байтов с заданым размером в Go слайс 
 func C.GoBytes(unsafe.Pointer, C.int) []byte
 ```
 
+---
+![bg](assets/images/background.jpg)
+
+### Конвертация памяти напрямую из C в Go
+
 Конвертация памяти напрямую без копирования в Go слайс байтов
 ```go
 slice := (*[1 << 30]byte)(unsafe.Pointer(&C.buf))[:int(C.buf_size):int(C.buf_size)]
@@ -373,9 +378,9 @@ The fastest malloc we’ve seen; works particularly well with threads and STL. A
 ---
 ![bg](assets/images/background.jpg)
 
-## Спасибо за внимание!
+## Спасибо за внимание! Задавайте ваши вопросы.
 
-Презентация и примеры находятся здесь
+Презентация и примеры находятся Github
 
 ```text
 https://github.com/serenissimus/cgo-presentation
