@@ -3,7 +3,7 @@
 #include "time.h"
 
 // Linux
-// Time measured: 4.128 seconds.
+// Time measured: 0.342 seconds
 int main(const int argc, const char **argv) {
     const int N = 2000000;
     const int length = 16;
