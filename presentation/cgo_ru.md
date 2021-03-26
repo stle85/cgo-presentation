@@ -9,9 +9,11 @@ marp: true
 ---
 ![bg](assets/images/background.jpg)
 
-- Введение
+## Что будет рассказанно
+
+- Введение в CGO
 - Управление памятью
-- Профилировщики
+- Инстурменты
 - Скорость выполнения
 - Время компилции
 - Кросс-компиляция
@@ -19,10 +21,7 @@ marp: true
 ---
 ![bg](assets/images/background.jpg)
 
-## Введение
-
----
-![bg](assets/images/background.jpg)
+## Начать использовать CGO просто
 
 ```go
 import "C"
@@ -261,6 +260,70 @@ func MyFunction2(arg1, arg2 C.int, arg3 *C.char) (C.int, *C.char) {...}
 ---
 ![bg](assets/images/background.jpg)
 
+## Заголовочный файл, генерируемый CGO
+
+```c
+typedef struct { const char *p; ptrdiff_t n; } _GoString_;
+typedef signed char GoInt8;
+typedef unsigned char GoUint8;
+typedef short GoInt16;
+typedef unsigned short GoUint16;
+typedef int GoInt32;
+typedef unsigned int GoUint32;
+typedef long long GoInt64;
+typedef unsigned long long GoUint64;
+typedef GoInt64 GoInt;
+typedef GoUint64 GoUint;
+typedef __SIZE_TYPE__ GoUintptr;
+typedef float GoFloat32;
+typedef double GoFloat64;
+typedef float _Complex GoComplex64;
+typedef double _Complex GoComplex128;
+typedef _GoString_ GoString;
+typedef void *GoMap;
+typedef void *GoChan;
+typedef struct { void *t; void *v; } GoInterface;
+typedef struct { void *data; GoInt len; GoInt cap; } GoSlice;
+
+extern int MyFunction(GoInt arg1, GoInt arg2, char* arg3);
+
+struct MyFunction2_return {
+	int r0;
+	char* r1;
+};
+extern struct MyFunction2_return MyFunction2(int arg1, int arg2, char* arg3);
+```
+
+---
+![bg](assets/images/background.jpg)
+
+## Плюсы GO
+
+- Управление памятью
+- Инстурменты
+- Скорость выполнения
+- Время компилции
+- Кросс-компиляция
+
+---
+![bg](assets/images/background.jpg)
+
+## Они же и минусы в CGO
+
+- Управление памятью
+- Инстурменты
+- Скорость выполнения
+- Время компилции
+- Кросс-компиляция
+
+---
+![bg](assets/images/background.jpg)
+
+## Перейдём к примерам
+
+---
+![bg](assets/images/background.jpg)
+
 ## Фрагментация памяти
 
 В Go приложениях с CGO 2-е независимые кучи:
@@ -306,3 +369,14 @@ The fastest malloc we’ve seen; works particularly well with threads and STL. A
 - net
 - crypto/x509
 - plugin
+
+---
+![bg](assets/images/background.jpg)
+
+## Спасибо за внимание!
+
+Презентация и примеры находятся здесь
+
+```text
+https://github.com/serenissimus/cgo-presentation
+```
